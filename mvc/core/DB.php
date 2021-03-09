@@ -92,6 +92,7 @@ class DB
             $exec_result = mysqli_query($this->conn, $result_sql);
             $result = $exec_result->fetch_assoc();
         }
+        // pre($this->conn->error);
         return $result;
     }
 

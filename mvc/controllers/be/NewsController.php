@@ -77,11 +77,11 @@ class NewsController extends Controller
     public function update()
     {
         $request = $_POST;
-
+        // pre($request['description']);   
         $data = [
             'title' => $request['title'],
-            'description' => $request['description'],
-            'content' => $request['content'],
+            'description' => htmlspecialchars($request['description']),
+            'content' => htmlspecialchars($request['content']),
             'type_id' => $request['type_id'],
             'slug' => $request['slug'],
             'meta_title' => $request['meta_title'],
@@ -98,7 +98,8 @@ class NewsController extends Controller
         $news = $this->news_model->update(
             $data,
             [
-                'id' => $request['id']
+                // 'id' => $request['id']
+                'id' => 5
             ]
         );
 

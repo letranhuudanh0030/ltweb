@@ -8,6 +8,10 @@ const convertToSlug = function (Text)
         ;
 }
 
+const htmlspecialchars_decode = function (str) {
+    return str.replace('&amp;', '&').replace('&quot;', '"').replace('&#039;', "'").replace('&lt;', '<').replace('&gt;', '>');
+}
+
 function isJson(str) {
     try {
         JSON.parse(str);

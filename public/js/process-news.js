@@ -66,7 +66,11 @@ $(function () {
         var form = modal.find("#form_news")
         form.validate()
 
+        // console.log(action);
+
         if(action == "edit"){
+            console.log(ob);
+            
             news_name.val(ob.title)
             news_type.val(ob.type_id)
             description.summernote("code", ob.description)

@@ -7,6 +7,11 @@
 
 // Frontend
 $router->get('/', 'HomeController@index');
+$router->get('/about', 'HomeController@about');
+$router->get('/product', 'HomeController@product');
+$router->get('/service', 'HomeController@service');
+$router->get('/pricing', 'HomeController@pricing');
+$router->get('/contact', 'HomeController@contact');
 
 // Auth
 $router->get('/login', 'Be\Auth\LoginController@index');

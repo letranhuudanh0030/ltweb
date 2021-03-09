@@ -78,7 +78,8 @@ class NewsTypeController extends Controller
                 'meta_title' => $request['meta_title'],
                 'meta_description' => $request['meta_description'],
                 'meta_keyword' => $request['meta_keyword'],
-                'updated_at' => date("Y-m-d H:i:s")
+                'updated_at' => date("Y-m-d H:i:s"),
+                'slug' => $request['slug']
             ],
             [
                 'id' => $request['id']

@@ -6,6 +6,11 @@ function pre($data)
     echo "</pre>";
 }
 
+function htmlRead($html)
+{
+    return html_entity_decode(htmlspecialchars_decode($html));
+}
+
 function getTableById($table, $id)
 {
     $qr = "SELECT * FROM $table WHERE id = $id";
