@@ -49,13 +49,9 @@ class Model extends DB
 		// return $query;
 	}
 
-	function get_list_publish_by_order()
+	function get_list_publish_by_order($condition = ['publish' => 1] ,$sort = ['sort_order' => "ASC"])
 	{
-		$query = $this->select("*", $this->table, [
-			'publish' => 1
-		],[
-			'sort_order' => "ASC"
-		]);
+		$query = $this->select("*", $this->table, $condition , $sort);
 		return mysqli_fetch_all($query, MYSQLI_ASSOC);
 	}
 

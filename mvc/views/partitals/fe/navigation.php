@@ -14,7 +14,7 @@
                      <!-- Logo -->
                      <div class="logo-wrap">
                          <a href="index.html" class="logo__link">
-                             <img class="logo logo--dark" src="/public/images/fe/logo_dark.png" alt="logo">
+                             <img class="logo logo--dark" src="<?= isset($data['general']['logo']) ? $data['general']['logo'] : '/public/uploads/logo.png' ?>" alt="logo">
                          </a>
                      </div>
 
@@ -28,12 +28,12 @@
 
                  <nav id="navbar-collapse" class="nav__wrap collapse navbar-collapse">
                      <ul class="nav__menu">
-
-                         <li class="nav__dropdown active">
-                             <a href="index.html">Home</a>
+                        <?php foreach($GLOBALS['config']['menu_fe'] as $key => $menu):?>
+                         <li class="nav__dropdown <?= ($_SERVER['REQUEST_URI'] == $menu['url']) ? 'active' : '' ?>">
+                             <a href="<?= $menu['url']?>"><?= $menu['name']?></a>
                          </li>
-
-                         <li class="nav__dropdown">
+                        <?php endforeach; ?>
+                         <!-- <li class="nav__dropdown">
                              <a href="#">Pages</a>
                              <i class="fa fa-angle-down nav__dropdown-trigger"></i>
                              <ul class="nav__dropdown-menu">
@@ -42,7 +42,7 @@
                                  <li><a href="contact.html">Contact</a></li>
                                  <li><a href="404.html">404</a></li>
                              </ul>
-                         </li>
+                         </li> -->
 
                          
 

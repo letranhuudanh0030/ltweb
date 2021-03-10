@@ -1,10 +1,10 @@
 <?php require('./mvc/views/partitals/fe/home/slide.php') ?>
-<?php require('./mvc/views/partitals/fe/home/feature.php') ?>
-<?php require('./mvc/views/partitals/fe/home/video.php') ?>
-<?php require('./mvc/views/partitals/fe/home/feature4.php') ?>
-<?php require('./mvc/views/partitals/fe/home/mission.php') ?>
-<?php require('./mvc/views/partitals/fe/home/select_work.php') ?>
-<?php require('./mvc/views/partitals/fe/home/feature_tab.php') ?>
+<?php require('./mvc/views/partitals/fe/home/ability.php') ?>
+<?php //require('./mvc/views/partitals/fe/home/video.php') ?>
+<?php //require('./mvc/views/partitals/fe/home/feature4.php') ?>
+<?php require('./mvc/views/partitals/fe/home/product.php') ?>
+<?php require('./mvc/views/partitals/fe/home/gallery.php') ?>
+<?php require('./mvc/views/partitals/fe/home/service.php') ?>
 <?php require('./mvc/views/partitals/fe/home/result.php') ?>
 <?php require('./mvc/views/partitals/fe/home/blog.php') ?>
 <?php require('./mvc/views/partitals/fe/home/action.php') ?>

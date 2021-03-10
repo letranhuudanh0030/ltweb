@@ -9,9 +9,13 @@
 $router->get('/', 'HomeController@index');
 $router->get('/about', 'HomeController@about');
 $router->get('/product', 'HomeController@product');
+$router->get('/product/{slug}', 'HomeController@productDetail');
 $router->get('/service', 'HomeController@service');
+$router->get('/news', 'HomeController@news');
+$router->get('/news/{slug}', 'HomeController@newsDetail');
 $router->get('/pricing', 'HomeController@pricing');
 $router->get('/contact', 'HomeController@contact');
+$router->post('/send', 'HomeController@sendEmail');
 
 // Auth
 $router->get('/login', 'Be\Auth\LoginController@index');

@@ -1,0 +1,28 @@
+.entry__excerpt {
+    margin-bottom: 20px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 3;
+}
+
+.logo {
+    max-height: 100%;
+}
+
+.text-danger{
+    color: red;
+}
+
+.p-4{
+    padding: 1em;
+}
+
+.text-muted{
+    color: gray;
+}
+
+.font-weight-bold{
+    font-weight: bold;
+}

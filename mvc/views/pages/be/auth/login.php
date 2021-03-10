@@ -2,7 +2,7 @@
     <!-- /.login-logo -->
     <div class="card card-outline card-primary">
         <div class="card-header text-center">
-            <a href="#" class="h1"><b>Admin</b>LTE</a>
+            <a href="#" class="h1"><b>Admin</b></a>
         </div>
         <div class="card-body">
             <p class="login-box-msg">Sign in to start your session</p>
@@ -10,14 +10,16 @@
             <form action="/login" method="post">
                 <div class="mb-3">
                     <div class="input-group">
-                        <input type="email" name="email" class="form-control" placeholder="Email" >
+                        <input type="email" name="email" class="form-control" placeholder="Email" value="<?= isset($data['oldEmail']) ? $data['oldEmail'] : "" ?>">
                         <div class="input-group-append">
                             <div class="input-group-text">
                                 <span class="fas fa-envelope"></span>
                             </div>
                         </div>
                     </div>
-                    <p class="text-danger"><?= $data['error']['email'] ?></p>
+                    <p class="text-danger">
+                        <?= isset($data['error']['email']) ? $data['error']['email'] : '' ?>
+                    </p>
                 </div>
                 <div class="mb-3">
                     <div class="input-group">
@@ -28,7 +30,9 @@
                             </div>
                         </div>
                     </div>
-                    <p class="text-danger"><?= $data['error']['password'] ?></p>
+                    <p class="text-danger">
+                        <?= isset($data['error']['password']) ? $data['error']['password'] : "" ?>
+                    </p>
                 </div>
                 <div class="row">
                     <div class="col-8">

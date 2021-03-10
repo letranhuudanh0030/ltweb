@@ -3,8 +3,8 @@
     <div class="container">
 
         <div class="heading-row text-center">
-            <span class="subheading">Tin tức</span>
-            <h2 class="heading">Cập nhật mới nhất</h2>
+            <h2 class="heading">Tin tức</h2>
+            <span class="subheading">Cập nhật mới nhất</span>
         </div>
 
         <div class="row">
@@ -20,11 +20,11 @@
                         </h4>
                         <ul class="entry__meta">
                             <li><?= dateFormat($news['created_at'], "d-m-Y") ?></li>
-                            <li><a href="blog-single.html">10 Comments</a></li>
+                            <!-- <li><a href="blog-single.html">10 Comments</a></li> -->
                         </ul>
                         <div class="entry__content">
                             <p class="entry__excerpt"><?= htmlRead($news['description']) ?></p>
-                            <a href="blog-single.html" class="btn btn-sm btn-dark">Xem thêm</a>
+                            <a href="/news/<?= $news['slug'] ?>" class="btn btn-sm btn-dark">Xem thêm</a>
                         </div>
                     </div>
                 </article>

@@ -22,9 +22,14 @@
     <link rel="apple-touch-icon" href="/public/canna/img/apple-touch-icon.png">
     <link rel="apple-touch-icon" sizes="72x72" href="/public/canna/img/apple-touch-icon-72x72.png">
     <link rel="apple-touch-icon" sizes="114x114" href="/public/canna/img/apple-touch-icon-114x114.png">
+
+    <link rel="stylesheet" href="/public/css/fe.css">
+    <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=60490e8e9c00ae0011d417e4&product=inline-share-buttons" async="async"></script>
 </head>
 
 <body>
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v10.0&appId=312930472766287&autoLogAppEvents=1" nonce="atSQoIW9"></script>
     <div class="loader-mask">
         <div class="loader">
             <div></div>

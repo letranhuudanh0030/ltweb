@@ -70,5 +70,33 @@ return [
             'url' => '/admin/media',
             'submenu' => []
         ]
+    ],
+
+    'menu_fe' => [
+        '/' => [
+            'name' => 'Trang chủ',
+            'url' => '/'
+        ],
+        'about' => [
+            'name' => 'Giới thiệu',
+            'url' => '/about'
+        ],
+        'product' => [
+            'name' => 'Sản phẩm',
+            'url' => '/product'
+        ],
+        'news' => [
+            'name' => 'Bài viết',
+            'url' => '/news'
+        ],
+        'pricing' => [
+            'name' => 'Bảng giá',
+            'url' => '/pricing'
+        ],
+        'contact' => [
+            'name' => 'Liên hệ',
+            'url' => '/contact'
+        ]
+
     ]
 ];

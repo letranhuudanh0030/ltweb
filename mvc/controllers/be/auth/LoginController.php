@@ -26,26 +26,39 @@ class LoginController extends Controller
         $password = $_POST['password'];
         $error = [];
 
-        if(empty($email)){
-            $error['email'] = "This field is required.";
-        } 
-        if(empty($password)){
-            $error['password'] = "This field is required.";
-        }
-
+        
         $user = $this->user_model->get_info('*', [
             'email' => $email,
             'publish' => 1
-        ]);
+            ]);
+            
+            
+        if(empty($email)){
+            $error['email'] = "This field is required.";
+        } else {
+            if(empty($user)){
+                $error['email'] = "Account does not exist";
+            } 
+        } 
+
+        if(empty($password)){
+            $error['password'] = "This field is required.";
+        } else {
+            if(!password_verify($password, $user['password'])){
+                $error['password'] = "Incorrect password";
+            }
+        } 
 
         if(password_verify($password, $user['password'])){
             $_SESSION['auth'] = $user; 
             $_SESSION['user_id'] = $user['id']; 
             header('Location: /admin');
         } else {
+            
             $this->view('app', [
                 'page' => 'auth/login',
-                'error' => $error
+                'error' => $error,
+                'oldEmail' => $email
             ]);
         }
 
