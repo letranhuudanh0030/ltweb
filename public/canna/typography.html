@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Canna | Typography</title>
+
+  <meta charset="utf-8">
+  <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <meta name="description" content="">
+
+  <!-- Google Fonts -->
+  <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700%7CSource+Sans+Pro:400,300,700,600%7CPlayfair+Display:400,700,400italic' rel='stylesheet'>
+
+  <!-- Css -->
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/font-icons.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/colors/color-mint.css" />
+
+  <!-- Favicons -->
+  <link rel="shortcut icon" href="img/favicon.ico">
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png">
+
+</head>
+
+<body>
+
+  <!-- Preloader -->
+  <div class="loader-mask">
+    <div class="loader">
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <header class="nav">
+
+    <div class="nav__holder nav--sticky">
+      <div class="container relative">
+        <div class="flex-parent">
+
+          <form method="get" class="nav__search-wrap">
+            <input type="search" class="nav__search-input" placeholder="Type &amp; Hit Enter">
+            <i class="fa fa-close nav__search-close" id="nav__search-close"></i>
+          </form>
+
+          <div class="nav__header clearfix">
+            <!-- Logo -->
+            <div class="logo-wrap">
+              <a href="index.html" class="logo__link">
+                <img class="logo logo--dark" src="img/logo_dark.png" alt="logo">
+              </a>
+            </div>
+
+            <button type="button" class="nav__icon-toggle" id="nav__icon-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="nav__icon-toggle-bar"></span>
+              <span class="nav__icon-toggle-bar"></span>
+              <span class="nav__icon-toggle-bar"></span>
+            </button>
+          </div> <!-- end nav-header -->
+
+          <nav id="navbar-collapse" class="nav__wrap collapse navbar-collapse">              
+            <ul class="nav__menu">
+
+              <li class="nav__dropdown active">
+                <a href="index.html">Home</a>
+                <i class="fa fa-angle-down nav__dropdown-trigger"></i>
+                <ul class="nav__dropdown-menu">
+                  <li><a href="index.html">Home Multi-Page</a></li>
+                  <li><a href="index-creative-1.html">Home Creative 1</a></li>
+                  <li><a href="index-creative-2.html">Home Creative 2</a></li>
+                  <li><a href="index-creative-3.html">Home Creative 3</a></li>
+                  <li><a href="index-onepage.html">Home Onepage</a></li>
+                  <li><a href="index-animated-bg.html">Home Animated Bg</a></li>
+                  <li><a href="index-text-rotator.html">Home Text Rotator</a></li>
+                  <li><a href="index-video-bg.html">Home Video Bg</a></li>
+                  <li><a href="index-vimeo-bg.html">Home Vimeo Bg</a></li>
+                  <li><a href="index-youtube-bg.html">Home Youtube Bg</a></li>
+                </ul>
+              </li>
+
+              <li class="nav__dropdown">
+                <a href="#">Pages</a>
+                <i class="fa fa-angle-down nav__dropdown-trigger"></i>
+                <ul class="nav__dropdown-menu">
+                  <li><a href="services.html">Services</a></li>
+                  <li><a href="about-us.html">About Us</a></li>
+                  <li><a href="contact.html">Contact</a></li>
+                  <li><a href="404.html">404</a></li>
+                </ul>
+              </li>
+
+              <li class="nav__dropdown">
+                <a href="#">Portfolio</a>
+                <i class="fa fa-angle-down nav__dropdown-trigger"></i>
+                <ul class="nav__dropdown-menu">
+                  <li><a href="portfolio-4.html">4 Columns</a></li>
+                  <li><a href="portfolio-3.html">3 Columns</a></li>
+                  <li><a href="portfolio-2.html">2 Columns</a></li>
+                  <li><a href="portfolio-single.html">Single Project</a></li>
+                </ul>
+              </li>
+
+              <li class="nav__dropdown">
+                <a href="#">Blog</a>
+                <i class="fa fa-angle-down nav__dropdown-trigger"></i>
+                <ul class="nav__dropdown-menu">
+                  <li><a href="blog-standard.html">Standard</a></li>
+                  <li><a href="blog-single.html">Single Post</a></li>
+                </ul>
+              </li>
+
+              <li class="nav__dropdown">
+                <a href="#">Features</a>
+                <i class="fa fa-angle-down nav__dropdown-trigger"></i>
+                <ul class="nav__dropdown-menu nav__dropdown-menu--right">
+                  <li><a href="shortcodes.html">Shortcodes</a></li>
+                  <li><a href="typography.html">Typography</a></li>
+                </ul>
+              </li>
+
+
+              <!-- Search -->
+              <li class="hidden-sm hidden-xs">
+                <div class="nav__search hidden-sm hidden-xs">
+                  <span class="nav__search-trigger" id="nav__search-trigger">
+                    <i class="fa fa-search"></i>
+                  </span>
+                </div>
+              </li>
+
+              <!-- Mobile Search -->
+              <li class="hidden-lg hidden-md">
+                <form method="get" class="nav__search-mobile">
+                  <input type="search" placeholder="Search..." class="nav__search-mobile-input">
+                  <button type="submit" class="nav__search-mobile-button">
+                    <i class="fa fa-search"></i>
+                  </button>
+                </form>
+              </li>
+
+            </ul> <!-- end menu -->
+
+          </nav> <!-- end nav-wrap -->         
+      
+        </div> <!-- end flex-parent -->
+      </div> <!-- end container -->
+
+    </div>
+  </header> <!-- end navigation -->
+
+
+  <main class="main oh">
+
+    <!-- Page Title -->
+    <section class="page-title text-center" style="background-image: url(img/page_title/contact_title_bg.jpg);">
+      <div class="container relative clearfix">
+        <div class="page-title__outer">
+          <div class="page-title__inner">
+            <h1 class="page-title__title white">Typography</h1>
+            <ol class="breadcrumb">
+              <li>
+                <a href="index.html">Home</a>
+              </li>
+              <li>
+                <a href="index.html">Pages</a>
+              </li>
+              <li class="active">
+                Typography
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section> <!-- end page title -->
+
+
+    <!-- Headings -->
+    <section class="section-wrap section-headings pb-0">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-sm-6">
+            <h1>Heading h1</h1>
+            <p>Our Theme is a very slick and clean e-commerce template with endless possibilities. Creating an awesome website with this Theme is easy than you can imagine.</p>
+          </div>
+
+          <div class="col-sm-6">
+            <h2>Heading h2</h2>
+            <p>Our Theme is a very slick and clean e-commerce template with endless possibilities. Creating an awesome website with this Theme is easy than you can imagine.</p>            
+          </div>
+
+        </div> <!-- end row -->
+
+        <div class="row">
+
+          <div class="col-sm-6">
+            <h3>Heading h3</h3>
+            <p>Our Theme is a very slick and clean e-commerce template with endless possibilities. Creating an awesome website with this Theme is easy than you can imagine.</p>
+          </div>
+
+          <div class="col-sm-6">
+            <h4>Heading h4</h4>
+            <p>Our Theme is a very slick and clean e-commerce template with endless possibilities. Creating an awesome website with this Theme is easy than you can imagine.</p>            
+          </div>
+
+        </div> <!-- end row -->
+
+        <div class="row">
+
+          <div class="col-sm-6">
+            <h5>Heading h5</h5>
+            <p>Our Theme is a very slick and clean e-commerce template with endless possibilities. Creating an awesome website with this Theme is easy than you can imagine.</p>
+          </div>
+
+          <div class="col-sm-6">
+            <h6>Heading h6</h6>
+            <p>Our Theme is a very slick and clean e-commerce template with endless possibilities. Creating an awesome website with this Theme is easy than you can imagine.</p>            
+          </div>
+
+        </div> <!-- end row -->
+      </div> <!-- end container -->
+    </section> <!-- end headings -->
+
+    <!-- Quotes -->
+    <section class="section-wrap pb-0">
+      <div class="container">
+
+        <h2 class="bottom-line text-center">Blockquotes</h2>
+        <div class="row mt-50">
+
+          <div class="col-sm-6">
+            <blockquote class="mb-30">
+              <p>
+                Be who you are and say what you feel, because those who mind don't matter, and those who matter don't mind.
+              </p>
+              <span>― Bernard M. Baruch</span>
+            </blockquote>
+          </div>
+
+          <div class="col-sm-6">
+            <blockquote class="blockquote-1">
+              <p>
+                Be who you are and say what you feel, because those who mind don't matter, and those who matter don't mind.
+              </p>
+              <span>― Bernard M. Baruch</span>
+            </blockquote>         
+          </div>
+
+        </div> <!-- end row -->
+      </div> <!-- end container -->
+    </section> <!-- end quotes -->
+
+
+    <!-- Dropcaps -->
+    <section class="section-wrap pb-0">
+      <div class="container">
+
+        <h2 class="bottom-line text-center">Dropcaps</h2>
+        <div class="row mt-50">
+
+          <div class="col-sm-6 mb-30">
+            <p><span class="dropcap">C</span>
+              anna Theme is a very slick and clean e-commerce template with endless possibilities. Creating an awesome clothes store with this Theme is easy than you can imagine. We possess within us two minds. So far I have written only of the conscious mind. I would now like to introduce you to your second mind, the hidden and mysterious subconscious. Our subconscious mind contains such power and complexity that it literally staggers the imagination.
+            </p>
+          </div>
+
+          <div class="col-sm-6">
+            <p><span class="dropcap-1">C</span>
+              anna Theme is a very slick and clean e-commerce template with endless possibilities. Creating an awesome clothes store with this Theme is easy than you can imagine. We possess within us two minds. So far I have written only of the conscious mind. I would now like to introduce you to your second mind, the hidden and mysterious subconscious. Our subconscious mind contains such power and complexity that it literally staggers the imagination.
+            </p>        
+          </div>
+
+        </div> <!-- end row -->
+      </div> <!-- end container -->
+    </section> <!-- end dropcaps -->
+
+
+    <!-- Html Style -->
+    <section class="section-wrap pb-0">
+      <div class="container">
+
+        <h2 class="bottom-line text-center">Html Style</h2>
+        <div class="row mt-50">
+
+          <div class="col-xs-12">
+            <p>
+              Our Theme is a very slick and clean e-commerce <a href="#">text link</a> with endless possibilities. Creating an awesome <strong>bold text</strong> store with this Theme is easy than you can imagine. We possess within us two minds. So far I have written only of the <i>italic text</i>. I would now like to introduce you to your second mind, the hidden and mysterious subconscious. Our subconscious mind contains such power and complexity that it literally bold text the imagination. We know that this subconscious mind controls and orchestrates our <span class="highlight">highlighted text</span> functions, from pumping blood to all parts of our body to egulating our breathing and digestion. We further know that the subconscious has recorded every event that has ever happened to us.
+            </p>
+          </div>
+
+        </div> <!-- end row -->
+      </div> <!-- end container -->
+    </section> <!-- end html style -->
+
+
+    <!-- Bullets & Lists -->
+    <section class="section-wrap pb-0">
+      <div class="container">
+
+        <h2 class="bottom-line text-center">Bullets &amp; Lists</h2>
+        <div class="row mt-50">
+
+          <div class="col-sm-3 mb-30">
+            <ul class="bullets">
+              <li>Our Theme is a very slick</li>
+              <li>Clean &amp; minimal design</li>
+              <li>The best theme ever</li>
+              <li>Super flexible template</li>
+              <li>Tons of features</li>
+            </ul>
+          </div> <!-- end col -->
+
+          <div class="col-sm-3 mb-30">
+            <ul class="arrows">
+              <li><i class="fa fa-angle-right"></i> Our Theme is a very slick</li>
+              <li><i class="fa fa-angle-right"></i> Clean &amp; minimal design</li>
+              <li><i class="fa fa-angle-right"></i> The best theme ever</li>
+              <li><i class="fa fa-angle-right"></i> Super flexible template</li>
+              <li><i class="fa fa-angle-right"></i> Tons of features</li>
+            </ul>
+          </div> <!-- end col -->
+
+          <div class="col-sm-3 mb-30">
+            <ul class="checks">
+              <li><i class="fa fa-check"></i> Our Theme is a very slick</li>
+              <li><i class="fa fa-check"></i> Clean &amp; minimal design</li>
+              <li><i class="fa fa-check"></i> The best theme ever</li>
+              <li><i class="fa fa-check"></i> Super flexible template</li>
+              <li><i class="fa fa-check"></i> Tons of features</li>
+            </ul>
+          </div> <!-- end col -->
+
+          <div class="col-sm-3">
+            <ol class="numbers">
+              <li>Our Theme is a very slick</li>
+              <li>Clean &amp; minimal design</li>
+              <li>The best theme ever</li>
+              <li>Super flexible template</li>
+              <li>Tons of features</li>
+            </ol>
+          </div> <!-- end col -->
+
+        </div> <!-- end row -->
+      </div> <!-- end container -->
+    </section> <!-- end bullets & lists -->
+    
+
+    <!-- Columns -->
+    <section class="section-wrap pb-60 section-columns">
+      <div class="container">
+
+        <h2 class="bottom-line text-center">Columns</h2>
+
+        <!-- 1/2 column -->
+        <div class="row mt-50">
+
+          <div class="col-sm-6">
+            <h6>1/2 Column</h6>
+            <p>Our Theme is a very slick and clean e-commerce template with endless possibilities. Creating an awesome website with this Theme is easy than you can imagine.</p>
+          </div> <!-- end col -->
+
+          <div class="col-sm-6">
+            <h6>1/2 Column</h6>
+            <p>Our Theme is a very slick and clean e-commerce template with endless possibilities. Creating an awesome website with this Theme is easy than you can imagine.</p>
+          </div> <!-- end col -->
+
+        </div> <!-- end row -->
+        
+        <!-- 1/3 column -->
+        <div class="row">
+
+          <div class="col-sm-4">
+            <h6>1/3 Column</h6>
+            <p>Our Theme is a very slick and clean e-commerce template with endless possibilities. Creating an awesome website with this Theme is easy than you can imagine.</p>
+          </div> <!-- end col -->
+
+          <div class="col-sm-4">
+            <h6>1/3 Column</h6>
+            <p>Our Theme is a very slick and clean e-commerce template with endless possibilities. Creating an awesome website with this Theme is easy than you can imagine.</p>
+          </div> <!-- end col -->
+
+          <div class="col-sm-4">
+            <h6>1/3 Column</h6>
+            <p>Our Theme is a very slick and clean e-commerce template with endless possibilities. Creating an awesome website with this Theme is easy than you can imagine.</p>
+          </div> <!-- end col -->
+
+        </div> <!-- end row -->
+
+        <!-- 1/4 column -->
+        <div class="row">
+
+          <div class="col-sm-3">
+            <h6>1/4 Column</h6>
+            <p>Our Theme is a very slick and clean e-commerce template with endless possibilities.</p>
+          </div> <!-- end col -->
+
+          <div class="col-sm-3">
+            <h6>1/4 Column</h6>
+            <p>Our Theme is a very slick and clean e-commerce template with endless possibilities.</p>
+          </div> <!-- end col -->
+
+          <div class="col-sm-3">
+            <h6>1/4 Column</h6>
+            <p>Our Theme is a very slick and clean e-commerce template with endless possibilities.</p>
+          </div> <!-- end col -->
+
+          <div class="col-sm-3">
+            <h6>1/4 Column</h6>
+            <p>Our Theme is a very slick and clean e-commerce template with endless possibilities.</p>
+          </div> <!-- end col -->
+
+        </div> <!-- end row -->
+
+        <!-- 1/3 2/3 column -->
+        <div class="row">
+
+          <div class="col-sm-4">
+            <h6>1/3 Column</h6>
+            <p>Our Theme is a very slick and clean e-commerce template with endless possibilities. Creating an awesome website with this Theme is easy than you can imagine.</p>
+          </div> <!-- end col -->
+
+          <div class="col-sm-8">
+            <h6>2/3 Column</h6>
+            <p>Our Theme is a very slick and clean e-commerce template with endless possibilities. Creating an awesome website with this Theme is easy than you can imagine. Our Theme is a very slick and clean e-commerce template with endless possibilities. Creating an awesome website with this Theme is easy than you can imagine.</p>
+          </div> <!-- end col -->
+
+        </div> <!-- end row -->
+
+        <!-- 1/4 3/4 column -->
+        <div class="row">
+
+          <div class="col-sm-3">
+            <h6>1/4 Column</h6>
+            <p>Our Theme is a very slick and clean e-commerce template with endless possibilities.</p>
+          </div> <!-- end col -->
+
+          <div class="col-sm-9">
+            <h6>3/4 Column</h6>
+            <p>Our Theme is a very slick and clean e-commerce template with endless possibilities. Creating an awesome website with this Theme is easy than you can imagine. Our Theme is a very slick and clean e-commerce template with endless possibilities. Creating an awesome website with this Theme is easy than you can imagine.</p>
+          </div> <!-- end col -->
+
+        </div> <!-- end row -->
+
+        <!-- 1/6 column -->
+        <div class="row">
+
+          <div class="col-sm-2">
+            <h6>1/6 Column</h6>
+            <p>Our Theme is a very slick and clean e-commerce template with endless possibilities.</p>
+          </div> <!-- end col -->
+
+          <div class="col-sm-2">
+            <h6>1/6 Column</h6>
+            <p>Our Theme is a very slick and clean e-commerce template with endless possibilities.</p>
+          </div> <!-- end col -->
+
+          <div class="col-sm-2">
+            <h6>1/6 Column</h6>
+            <p>Our Theme is a very slick and clean e-commerce template with endless possibilities.</p>
+          </div> <!-- end col -->
+
+          <div class="col-sm-2">
+            <h6>1/6 Column</h6>
+            <p>Our Theme is a very slick and clean e-commerce template with endless possibilities.</p>
+          </div> <!-- end col -->
+
+          <div class="col-sm-2">
+            <h6>1/6 Column</h6>
+            <p>Our Theme is a very slick and clean e-commerce template with endless possibilities.</p>
+          </div> <!-- end col -->
+
+          <div class="col-sm-2">
+            <h6>1/6 Column</h6>
+            <p>Our Theme is a very slick and clean e-commerce template with endless possibilities.</p>
+          </div> <!-- end col -->
+
+        </div> <!-- end row -->
+
+      </div> <!-- end container -->
+    </section> <!-- end columns -->
+
+
+    <!-- Call to Action -->
+    <section class="section-wrap call-to-action bg-dark white-text">
+      <div class="container text-center">     
+        <h2 class="call-to-action__title nocaps">Are you ready to enjoy? Grab this Perfect Theme now!</h2>
+        <div class="mt-40">
+          <a href="#" class="btn btn-lg btn-color btn-icon">
+            <span>Purchase Now</span>
+            <i class="fa fa-angle-right"></i>             
+          </a>
+        </div>
+      </div>
+    </section> <!-- end call to action -->
+
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__widgets">
+          <div class="row">
+
+            <div class="col-md-4">
+              <div class="widget widget__get-in-touch">
+                <h5 class="widget__title nocaps">Get in Touch</h5>
+                <p class="widget__get-in-touch__paragraph">Phone: + 1 888 1554 456 123</p>
+                <p class="widget__get-in-touch__paragraph">Email: <a href="mailto:cannasupport@gmail.com">cannasupport@gmail.com</a></p>
+                <p class="widget__get-in-touch__paragraph">Fax: +63 918 4084 694</p>
+              </div>
+            </div> <!-- end stay in touch -->
+
+            <div class="col-md-4">
+              <div class="widget widget__footer-logo text-center local-scroll">
+                <a href="#home" class="widget__footer-logo__link">
+                  <img src="img/logo_dark.png" alt="">
+                </a>
+                <p class="mb-0">Canna Onepage is a very slick and clean template. Creating an awesome website with this Theme is easy than you can imagine.</p>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="widget footer-address-widget text-right">
+                <h5 class="widget__title nocaps">Location</h5>
+                <p class="footer-address">Canna inc.<br>Philippines, Talay st. 65,<br>PO Box 6200</p>
+              </div>
+            </div> <!-- end address -->
+
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="container">
+          <div class="row">
+
+            <div class="col-sm-6 col-xs-12 text-sm-center">
+              <span class="copyright">
+                &copy; 2017 Canna Theme  |  Made by <a href="https://deothemes.com">DeoThemes</a>
+              </span>
+            </div>
+              
+            <div class="col-sm-4 col-sm-offset-2 col-xs-12 text-right text-sm-center">
+              <div class="socials socials--nobase footer__socials clearfix">
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-facebook"></i></a>                  
+                <a href="#"><i class="fa fa-google-plus"></i></a>
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+                <a href="#"><i class="fa fa-vimeo"></i></a>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div> <!-- end bottom footer -->
+    </footer> <!-- end footer -->
+
+    <div id="back-to-top">
+      <a href="#top"><i class="fa fa-angle-up"></i></a>
+    </div>
+
+  </main> <!-- end main-wrapper -->
+  
+  <!-- jQuery Scripts -->
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/plugins.js"></script>
+  <script type="text/javascript" src="js/scripts.js"></script>
+
+</body>
+</html>

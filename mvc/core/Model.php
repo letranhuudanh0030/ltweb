@@ -14,6 +14,13 @@ class Model extends DB
 	// Cac field select mac dinh khi get_list (VD: $select = 'id, name')
 	var $select = '';
 
+	function get($select, $condition)
+    {
+        $query = $this->select($select, $this->table, $condition);
+        // pre($query);
+		return mysqli_fetch_all($query, MYSQLI_ASSOC);
+        // return $query;
+    }
     
     function get_list()
     {
@@ -27,6 +34,16 @@ class Model extends DB
 	{
 		$query = $this->select("*", $this->table, [
 			'publish' => 1
+		]);
+		return mysqli_fetch_all($query, MYSQLI_ASSOC);
+		// return $query;
+	}
+
+	function get_list_highlight()
+	{
+		$query = $this->select("*", $this->table, [
+			'publish' => 1,
+			'highlight' => 1
 		]);
 		return mysqli_fetch_all($query, MYSQLI_ASSOC);
 		// return $query;

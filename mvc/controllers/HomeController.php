@@ -17,9 +17,23 @@ class HomeController extends Controller{
     public function index()
     {
         $slides = $this->slide_model->get_list_publish_by_order();
+
+        $news_type = $this->news_type_model->get_info("*", [
+            'publish' => 1,
+            'slug' => 'news'
+        ]);
+
+        $news = $this->news_model->get("*", [
+            'publish' => 1,
+            'type_id' => $news_type['id'],
+            'highlight' => 1
+        ]);
+        
+        
         $this->view("layout", [
             'page' => 'home',
-            'slides' => $slides
+            'slides' => $slides,
+            'news' => $news
         ]);
     }
 
@@ -37,7 +51,7 @@ class HomeController extends Controller{
 
         $this->view("layout", [
             'page' => 'about',
-            'title_page' => 'About Us',
+            'title_page' => 'Giới thiệu',
             'news_about' => $news_about
         ]);
     }

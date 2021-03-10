@@ -3,6 +3,7 @@ class Controller
 {
     public function __construct()
     {
+        
         session_start();
         if (!isset($_SESSION['auth'])) {
             header('Location: /login');

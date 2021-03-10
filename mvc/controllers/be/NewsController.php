@@ -98,8 +98,8 @@ class NewsController extends Controller
         $news = $this->news_model->update(
             $data,
             [
-                // 'id' => $request['id']
-                'id' => 5
+                'id' => $request['id']
+                // 'id' => 5
             ]
         );
 

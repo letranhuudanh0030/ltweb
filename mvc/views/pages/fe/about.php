@@ -13,7 +13,7 @@
             </div> <!-- end col -->
 
             <div class="col-sm-6">
-                <img src="<?= $data['news_about']['image'] ?>" alt="" class="img-fluid">
+                <img src="<?= $data['news_about']['image'] ?>" alt="" class="img-fluid" width="100%">
             </div> <!-- end col -->
 
         </div>
