@@ -3,6 +3,8 @@
 namespace Mvc\Controllers;
 
 use Controller;
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
 
 class HomeController extends Controller
 {
@@ -14,6 +16,7 @@ class HomeController extends Controller
 
     function __construct()
     {
+        session_start();
         $this->slide_model = $this->model('SlideModel');
         $this->news_type_model = $this->model('NewsTypeModel');
         $this->news_model = $this->model('NewsModel');
@@ -68,6 +71,7 @@ class HomeController extends Controller
 
         $this->view("layout", [
             'page' => 'home',
+            'title_page' => 'Trang chủ',
             'slides' => $slides,
             'news' => $news,
             'services' => $services,
@@ -157,11 +161,9 @@ class HomeController extends Controller
 
     public function sendEmail()
     {
-
-        // pre($_POST);
         if ($_POST) {
 
-            $to = "letrahuudanh0030@gmail.com"; // Your email here
+            $to = "letranhuudanh0030@gmail.com"; // Your email here
             $subject = 'Message from my website'; // Subject message here
 
         }
@@ -192,16 +194,58 @@ class HomeController extends Controller
             'Reply-To: ' . $mail . '' . "\r\n" .
             'X-Mailer: PHP/' . phpversion();
 
-        $this->send_maild($to, $subject, $comment . "\r\n\n"  . 'Name: ' . $name . "\r\n" . 'Email: ' . $mail, $headers);
+
+        $this->send_mail($mail, $to, $subject, $comment . "<br>"  .'Name: '.$name. "<br>" .'Email: '.$mail, $headers);
+        $_SESSION['notice'] = "Đã gửi email";
+        header('Location: contact');
     }
 
     //Send mail function
-    function send_maild($to, $subject, $message, $headers)
+    function send_mail($from, $to, $subject, $message, $headers)
     {
-        if (@mail($to, $subject, $message, $headers)) {
-            echo json_encode(array('info' => 'success', 'msg' => "Your message has been sent. Thank you!"));
-        } else {
-            echo json_encode(array('info' => 'error', 'msg' => "Error, your message hasn't been sent"));
+        $mail = new PHPMailer(true);                              // Passing `true` enables exceptions
+        try {
+            //Server settings
+            $mail->SMTPDebug = 2;                                 // Enable verbose debug output
+            $mail->isSMTP();                                      // Set mailer to use SMTP
+            $mail->Host = gethostbyname('smtp.gmail.com');  // Specify main and backup SMTP servers
+            $mail->SMTPAuth = true;                               // Enable SMTP authentication
+            $mail->Username = 'danh.nambo@gmail.com';                 // SMTP username
+            $mail->Password = 'Nambo@12345!';                           // SMTP password
+            $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
+            $mail->Port = 587;
+
+            $mail->SMTPOptions = array(
+                'ssl' => array(
+                    'verify_peer' => false,
+                    'verify_peer_name' => false,
+                    'allow_self_signed' => true
+                )
+            );                                // TCP port to connect to
+
+            //Recipients
+            $mail->setFrom($from, 'Contact');
+            $mail->addAddress($to, 'Admin');     // Add a recipient
+            // $mail->addAddress($to);               // Name is optional
+            // $mail->addReplyTo('info@example.com', 'Information');
+            // $mail->addCC('cc@example.com');
+            // $mail->addBCC('bcc@example.com');
+
+            //Attachments
+            // $mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
+            // $mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
+
+            //Content
+            $mail->isHTML(true);                                  // Set email format to HTML
+            $mail->Subject = $subject;
+            $mail->Body    = $message;
+            $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
+
+            $mail->send();
+            echo 'Message has been sent';
+            
+        } catch (Exception $e) {
+            echo 'Message could not be sent. Mailer Error: ', $mail->ErrorInfo;
         }
     }
 

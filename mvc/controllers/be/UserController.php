@@ -70,6 +70,7 @@ class UserController extends Controller
         $request['password'] = password_hash($request['password'], PASSWORD_BCRYPT);
         
         $role = $this->user_model->store($request);
+        $_SESSION['notice'] = "Thêm thành công";
         echo json_encode($role);
     }
 

@@ -65,6 +65,7 @@ class ProductTypeController extends Controller
         // pre($request);
         
         $product_type = $this->product_type_model->store($request);
+        $_SESSION['notice'] = "Thêm thành công";
         echo json_encode($product_type);
     }
 

@@ -66,6 +66,7 @@ class SlideController extends Controller
         // pre($request);
         
         $slide = $this->slide_model->store($request);
+        $_SESSION['notice'] = "Thêm thành công";
         echo json_encode($slide);
     }
 

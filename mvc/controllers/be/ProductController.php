@@ -70,6 +70,7 @@ class ProductController extends Controller
         // pre($request);
         
         $product =  $this->product_model->store($request);
+        $_SESSION['notice'] = "Thêm thành công";
         echo json_encode($product);
     }
 

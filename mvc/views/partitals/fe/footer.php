@@ -6,26 +6,25 @@
 
                 <div class="col-md-4">
                     <div class="widget widget__get-in-touch">
-                        <h5 class="widget__title nocaps">Get in Touch</h5>
-                        <p class="widget__get-in-touch__paragraph">Phone: + 1 888 1554 456 123</p>
-                        <p class="widget__get-in-touch__paragraph">Email: <a href="mailto:cannasupport@gmail.com">cannasupport@gmail.com</a></p>
-                        <p class="widget__get-in-touch__paragraph">Fax: +63 918 4084 694</p>
+                        <h5 class="widget__title nocaps">Liên hệ với chúng tôi</h5>
+                        <p class="widget__get-in-touch__paragraph">Điện thoại: 0966 461 761</p>
+                        <p class="widget__get-in-touch__paragraph">Email: <a href="mailto:danh.le1997@gmail.com">danh.le1997@gmail.com</a></p>
                     </div>
                 </div> <!-- end stay in touch -->
 
                 <div class="col-md-4">
                     <div class="widget widget__footer-logo text-center local-scroll">
                         <a href="#home" class="widget__footer-logo__link">
-                            <img src="img/logo_dark.png" alt="">
+                            <img src="/public/uploads/logo.png" alt="" width="150px">
                         </a>
-                        <p class="mb-0">Canna Onepage is a very slick and clean template. Creating an awesome website with this Theme is easy than you can imagine.</p>
+                        <p class="mb-0">Phục vụ tận tâm, chân thành. Cảm ơn quý khách!</p>
                     </div>
                 </div>
 
                 <div class="col-md-4">
                     <div class="widget footer-address-widget text-right">
-                        <h5 class="widget__title nocaps">Location</h5>
-                        <p class="footer-address">Canna inc.<br>Philippines, Talay st. 65,<br>PO Box 6200</p>
+                        <h5 class="widget__title nocaps">Địa chỉ</h5>
+                        <p class="footer-address">268 Lý Thường Kiệt, Phường 14, Quận 10, Thành phố Hồ Chí Minh, Việt Nam</p>
                     </div>
                 </div> <!-- end address -->
 
@@ -39,7 +38,7 @@
 
                 <div class="col-sm-6 col-xs-12">
                     <span class="copyright">
-                        &copy; 2017 Canna Theme | Made by <a href="https://deothemes.com">DeoThemes</a>
+                        &copy; 2021 Edit by <a href="">LTWeb</a>
                     </span>
                 </div>
 

@@ -71,6 +71,9 @@ class NewsController extends Controller
         // pre($request);
         
         $news =  $this->news_model->store($request);
+
+        $_SESSION['notice'] = "Thêm thành công";
+        
         echo json_encode($news);
     }
 

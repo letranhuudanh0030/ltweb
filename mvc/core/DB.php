@@ -2,10 +2,10 @@
 class DB
 {
     public $conn;
-    public $servername = "us-cdbr-east-03.cleardb.com";
-    public $username = "b346ff97dc0052";
-    public $password = "43683e2d";
-    public $dbname = "heroku_f08791c812e6ab9";
+    public $servername = "localhost";
+    public $username = "root";
+    public $password = "";
+    public $dbname = "ltweb_mvc";
 
     function __construct()
     {

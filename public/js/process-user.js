@@ -121,6 +121,11 @@ $(function () {
                             ob.role_id = response.role_id
                             ob.phone = response.phone
                             ob.email = response.email
+
+                            Toast.fire({
+                                icon: 'success',
+                                title: 'Cập nhật thành công!'
+                            })
                         }
                     });
                 }

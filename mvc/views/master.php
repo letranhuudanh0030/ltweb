@@ -14,6 +14,7 @@
     <!-- Theme style -->
     <link rel="stylesheet" href="/public/css/adminlte.min.css">
     <link rel="stylesheet" href="/public/css/style.css">
+    <link rel="stylesheet" href="/public/css/sweetalert2/bootstrap-4.min.css">
     <?php if (isset($data['css'])) : ?>
         <?php foreach ($data['css'] as $css) : ?>
             <link rel="stylesheet" href="<?= $css; ?>">
@@ -55,11 +56,33 @@
     <script src="/public/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
     <!-- AdminLTE App -->
     <script src="/public/js/adminlte.min.js"></script>
+    <script src="/public/js/sweetalert2.min.js"></script>
+
+    <script>
+        var Toast = Swal.mixin({
+            toast: true,
+            position: 'top-end',
+            showConfirmButton: false,
+            timer: 3000
+        });
+    </script>
+
+    <?php if(isset($_SESSION['notice'])): ?>
+        <script>
+            Toast.fire({
+            icon: 'success',
+            title: '<?= $_SESSION['notice'] ?>'
+            })
+        </script>
+        <?php unset($_SESSION['notice']) ?>
+    <?php endif; ?>
+
     <?php if (isset($data['js'])) : ?>
         <?php foreach ($data['js'] as $js) : ?>
             <script src="<?= $js; ?>"></script>
         <?php endforeach; ?>
     <?php endif; ?>
+    
 
     <script>
         $('a.nav-link.active').closest('li.has-submenu').addClass('menu-open');

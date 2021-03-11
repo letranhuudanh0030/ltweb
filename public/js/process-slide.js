@@ -152,6 +152,11 @@ $(function () {
                             ob.name = response.name
                             ob.image = response.image
                             ob.description = response.description
+
+                            Toast.fire({
+                                icon: 'success',
+                                title: 'Cập nhật thành công!'
+                            })
         
                         }
                     });

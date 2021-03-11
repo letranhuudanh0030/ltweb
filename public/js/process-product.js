@@ -184,6 +184,11 @@ $(function () {
                             ob.meta_title = response.meta_title
                             ob.meta_description = response.meta_description
                             ob.meta_keyword = response.meta_keyword
+
+                            Toast.fire({
+                                icon: 'success',
+                                title: 'Cập nhật thành công!'
+                            })
                         }
                     });
                 }

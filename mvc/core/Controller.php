@@ -8,6 +8,11 @@ class Controller
         if (!isset($_SESSION['auth'])) {
             header('Location: /login');
         }   
+
+        // if ( $_SESSION['notice'] ) {
+        //     print $_SESSION['notice'];
+        //     unset($_SESSION['notice']);
+        // }
     }
 
     public function model($model)

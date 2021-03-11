@@ -74,6 +74,11 @@ $(function () {
                             // change data modal
                             ob.name = response.name
                             ob.role = response.role
+
+                            Toast.fire({
+                                icon: 'success',
+                                title: 'Cập nhật thành công!'
+                            })
                         }
                     });
                 }

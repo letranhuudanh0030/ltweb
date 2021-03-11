@@ -64,6 +64,9 @@ class RoleController extends Controller
         // pre($request);
         
         $role = $this->role_model->store($request);
+
+        $_SESSION['notice'] = "Thêm thành công";
+
         echo json_encode($role);
     }
 

@@ -7,7 +7,7 @@
 
     // Autoload class trong PHP
     spl_autoload_register(function (string $class_name) {
-        // print_r(PATH_ROOT . '/' . $class_name . '.php');die();
+        // print_r(include_once PATH_ROOT . '/' . $class_name . '.php');die();
         include_once PATH_ROOT . '/' . $class_name . '.php';
     });
 
