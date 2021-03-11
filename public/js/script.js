@@ -77,7 +77,12 @@ $(function(){
                 value: value
             },
             dataType: "json",
-            success: function (response) {}
+            success: function (response) {
+                Toast.fire({
+                    icon: 'success',
+                    title: 'Cập nhật hiển thị thành công!'
+                })
+            }
         });    
     })
 
@@ -92,7 +97,12 @@ $(function(){
                 value: value
             },
             dataType: "json",
-            success: function (response) {}
+            success: function (response) {
+                Toast.fire({
+                    icon: 'success',
+                    title: 'Cập nhật nổi bật thành công!'
+                })
+            }
         });    
     })
 
@@ -119,6 +129,10 @@ $(function(){
                 success: function (response){
                     $('#table-content #row_'+id).fadeOut();
                     modal.modal('hide')
+                    Toast.fire({
+                        icon: 'success',
+                        title: 'Xóa thành công!'
+                    })
                 }
             });
         })

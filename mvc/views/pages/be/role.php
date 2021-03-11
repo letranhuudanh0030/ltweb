@@ -37,7 +37,7 @@
 
                                         </td>
                                         <td>
-                                            <button class="btn btn-info edit" data-ob='<?= json_encode($item) ?>' id="add_role" data-toggle="modal" data-target="#modal_role" data-action="edit">Edit</button>
+                                            <button class="btn btn-info edit" data-ob='<?= json_encode($item) ?>' id="add_role" data-toggle="modal" data-target="#modal_role" data-action="edit" data-title="EDIT A NEW ROLE">Edit</button>
                                             <button class="btn btn-danger delete" data-id="<?= $item['id'] ?>" data-toggle="modal" data-target="#modal_delete" data-title="DELETE A ROLE" data-name="<?= $item['name'] ?>">Delete</button>
                                         </td>
                                     </tr>

@@ -41,7 +41,7 @@
 
                                         </td>
                                         <td>
-                                            <button class="btn btn-info edit" data-ob='<?= json_encode($item) ?>' id="add_slide" data-toggle="modal" data-target="#modal_slide" data-action="edit">Edit</button>
+                                            <button class="btn btn-info edit" data-ob='<?= json_encode($item) ?>' id="add_slide" data-toggle="modal" data-target="#modal_slide" data-action="edit" data-title="EDIT A NEW SLIDE">Edit</button>
                                             <button class="btn btn-danger delete" data-id="<?= $item['id'] ?>" data-toggle="modal" data-target="#modal_delete" data-title="DELETE A SLIDE" data-name="<?= $item['name'] ?>">Delete</button>
                                         </td>
                                     </tr>

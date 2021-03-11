@@ -31,7 +31,7 @@
 
                                         </td>
                                         <td>
-                                            <button class="btn btn-info edit" data-ob='<?= json_encode($item) ?>' id="add_news_type" data-toggle="modal" data-target="#modal_news_type" data-action="edit">Edit</button>
+                                            <button class="btn btn-info edit" data-ob='<?= json_encode($item) ?>' id="add_news_type" data-toggle="modal" data-target="#modal_news_type" data-action="edit" data-title="EDIT A NEW NEWS TYPE">Edit</button>
                                             <button class="btn btn-danger delete" data-id="<?= $item['id'] ?>" data-toggle="modal" data-target="#modal_delete" data-title="DELETE A NEWS TYPE" data-name="<?= $item['name'] ?>">Delete</button>
                                         </td>
                                     </tr>

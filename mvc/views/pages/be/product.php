@@ -56,7 +56,7 @@
                                                 $item['description'] = htmlRead($item['description']);
                                                 $item['content'] = htmlRead($item['content']);
                                             ?>
-                                            <button class="btn btn-info edit" data-ob='<?= json_encode($item) ?>' id="add_product" data-toggle="modal" data-target="#modal_product" data-action="edit">Edit</button>
+                                            <button class="btn btn-info edit" data-ob='<?= json_encode($item) ?>' id="add_product" data-toggle="modal" data-target="#modal_product" data-action="edit" data-title="EDIT A NEW PRODUCT">Edit</button>
                                             <button class="btn btn-danger delete" data-id="<?= $item['id'] ?>" data-toggle="modal" data-target="#modal_delete" data-title="DELETE A PRODUCT" data-name="<?= $item['name'] ?>">Delete</button>
                                         </td>
                                     </tr>
